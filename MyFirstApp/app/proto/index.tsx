@@ -23,6 +23,13 @@ export default function ProtoScreen() {
         )}
       />
 
+      <TouchableOpacity
+        style={styles.addButton}
+        onPress={() => alert("Add a new task!")}
+      >
+        <Text style={styles.addButtonText}>+</Text>
+      </TouchableOpacity>
+
       <Button 
         title="+ 新しいタスクを追加" onPress={() => alert("タスク追加")}
       />
@@ -35,14 +42,54 @@ export default function ProtoScreen() {
 }
 
 const styles = StyleSheet.create({
-  container: { flex: 1, padding: 20, backgroundColor: "#fff"},
-  header: { fontSize: 24, fontWeight: "bold", marginBottom: 20 },
+  container: { 
+    flex: 1,
+    padding: 20,
+    backgroundColor: "#fff"
+  },
+  header: {
+    fontSize: 24,
+    fontWeight: "bold",
+    marginBottom: 20,
+    textAlign: "center"
+  },
   taskCard: {
     padding: 15,
     marginVertical: 10,
     backgroundColor: "#f9f9f9",
-    borderRadius: 8
+    borderRadius: 8,
+    shadowColor: "#000",
+    shadowOpacity: .1,
+    shadowRadius: 4,
+    shadowOffset: { width: 0, height: 2 }
   },
-  taskName: { fontSize: 18 },
-  taskDeadline: { fontSize: 14, color: "#888"}
+  taskName: {
+    fontSize: 18,
+    fontWeight: "500"
+  },
+  taskDeadline: {
+    fontSize: 14,
+    color: "#888",
+    marginTop: 5
+  },
+  addButton: {
+    position: "absolute",
+    bottom: 100,
+    right: 20,
+    backgroundColor: "#4caf50",
+    width: 60,
+    height: 60,
+    borderRadius: 30,
+    justifyContent: "center",
+    alignItems: "center",
+    shadowColor: "#000",
+    shadowOpacity: .3,
+    shadowRadius: 5,
+    shadowOffset: { width: 0, height: 3 },
+  },
+  addButtonText: {
+    color: "#fff",
+    fontSize: 24,
+    fontWeight: "bold"
+  }
 });
