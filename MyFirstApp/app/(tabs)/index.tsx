@@ -34,6 +34,11 @@ export default function HomeScreen() {
         <Text>Item 3</Text>
       </View>
 
+      {/* プロトの導線 */}
+      <Link href="/proto">
+        <Text>Proto画面へ移動</Text>
+      </Link>
+
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
