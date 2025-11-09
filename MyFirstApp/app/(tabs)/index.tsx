@@ -44,6 +44,11 @@ export default function HomeScreen() {
         <Text>イベントサンプルへ移動</Text>
       </Link>
 
+      {/* ステートサンプルの導線 */}
+      <Link href="/sample_state">
+        <Text>ステートサンプルへ移動</Text>
+      </Link>
+
       <ThemedView style={styles.titleContainer}>
         <ThemedText type="title">Welcome!</ThemedText>
         <HelloWave />
